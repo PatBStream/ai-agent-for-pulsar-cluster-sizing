@@ -3,23 +3,23 @@
 This AI Agent assists in determining the optimal size and configuration of an Apache Pulsar deployment. It provides recommendations on the number of Brokers and Bookies, along with best practices and configuration options tailored to your system's requirements.​
 
 ### Features
-> **Broker and Bookie Sizing:** Calculates the recommended number of Brokers and Bookies based on your messaging throughput and storage needs.​
+- **Broker and Bookie Sizing:** Calculates the recommended number of Brokers and Bookies based on your messaging throughput and storage needs.​
 
-> **Configuration Recommendations:** Suggests optimal configurations for hardware resources, including CPU, memory, and storage, to ensure efficient operation.​
+- **Configuration Recommendations:** Suggests optimal configurations for hardware resources, including CPU, memory, and storage, to ensure efficient operation.​
 
-> **Best Practices Guidance:** Offers insights into best practices for deploying and managing Apache Pulsar clusters, including replication strategies and hardware considerations.​
+- **Best Practices Guidance:** Offers insights into best practices for deploying and managing Apache Pulsar clusters, including replication strategies and hardware considerations.​
 
 ## How to use
 To generate accurate recommendations, the agent works best when the following inputs are provided:
 
-> - **Desired Messaging Throughput:** Specify the target number of messages per second your system needs to handle.​
-> - **Message Size:** Provide the average size of the messages (in KB or MB).​
+ - **Desired Messaging Throughput:** Specify the target number of messages per second your system needs to handle.​
+ - **Message Size:** Provide the average size of the messages (in KB or MB).​
 
-> - **Data Retention Period:** Indicate how long messages should be retained within the system.​
+ - **Data Retention Period:** Indicate how long messages should be retained within the system.​
 
-> - **# of Consumers:** Provide an estimate of the total number of Consumers for these messages.  For example, 10 unique Consumers for each message produced, so a total of 10 Consumers.
+ - **# of Consumers:** Provide an estimate of the total number of Consumers for these messages.  For example, 10 unique Consumers for each message produced, so a total of 10 Consumers.
 
-> - **Hardware Specifications (optional):** Detail the available CPU, memory, and storage resources to tailor recommendations accordingly.​
+ - **Hardware Specifications (optional):** Detail the available CPU, memory, and storage resources to tailor recommendations accordingly.​
 
 ## Run the Agent
 **Update the main.py** file are stated in the comments with your specific Pulsar requirements.  
@@ -30,6 +30,7 @@ $ python3 -m venv mypulsaragent
 (mypulsaragent)$ pip install -r requirements.txt
 (mypulsaragent)$ export OPENAI_API_KEY='cat my_openai_key.txt`
 (mypulsaragent)$ python3 main.py
+
 ```
 
 ## Recommended Sizing Output
